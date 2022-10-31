@@ -3,10 +3,12 @@ void main() {
     'Name1': 45,
     'Name2': 56,
     'Name3': 5476,
-    'Name4': 657,
+    'Name': 657,
   };
-  int length = 4;
-  var key = contact.keys
-      .firstWhere((k) => contact[k] == length, orElse: () => 'Null');
-  print(key);
+
+  contact.forEach((key, value) {
+    if (key.length == 4) {
+      print('$key is of length 4, Its value is $value');
+    }
+  });
 }
